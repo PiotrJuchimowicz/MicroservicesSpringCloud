@@ -1,0 +1,44 @@
+version: '3'
+services:
+  adjusters:
+    image: postgres:latest
+    container_name: adjusters-db
+    environment:
+      - POSTGRES_USER=adjusters
+      - POSTGRES_PASSWORD=adjusters
+      - POSTGRES_DB=adjusters
+    ports: 
+      - '5433:5432'
+    volumes:
+      - ./adjusters-db-data:/var/lib/postgresql/data/
+  loss-management:
+    image: postgres:latest
+    container_name: loss-management-db
+    environment:
+      - POSTGRES_USER=loss-management
+      - POSTGRES_PASSWORD=loss-management
+      - POSTGRES_DB=loss-management
+    ports: 
+      - '5434:5432'
+    volumes:
+      - ./loss-management-db-data:/var/lib/postgresql/data/
+  loss-notification:
+    image: postgres:latest
+    container_name: loss-notification-db
+    environment:
+      - POSTGRES_USER=loss-notification
+      - POSTGRES_PASSWORD=loss-notification
+      - POSTGRES_DB=loss-notification
+    ports: 
+      - '5435:5432'
+    volumes:
+      - ./loss-notification-db-data:/var/lib/postgresql/data/
+  rabbitmq-loss:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-loss
+    environment:
+      RABBITMQ_DEFAULT_USER: default-user
+      RABBITMQ_DEFAULT_PASS: default-password
+    ports:
+      - 5672:5672
+      - 15672:15672
