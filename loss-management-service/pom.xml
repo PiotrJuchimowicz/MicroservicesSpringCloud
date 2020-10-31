@@ -56,6 +56,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+            <version>2.2.5.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>com.company.loss</groupId>
             <artifactId>dtos</artifactId>
