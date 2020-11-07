@@ -1,16 +1,15 @@
-package com.company.loss.messaging;
+package com.company.loss.demo;
 
-import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
-@EnableRabbit
-public class NotificationApplication {
+public class DiscoveryApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(NotificationApplication.class).web(WebApplicationType.SERVLET).run(args);
+        new SpringApplicationBuilder(DiscoveryApplication.class)
+                .web(WebApplicationType.NONE).run(args);
     }
 
 }

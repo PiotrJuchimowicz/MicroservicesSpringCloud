@@ -1,0 +1,6 @@
+What is it?
+Project show micorservices integration with spring. It contains microservices:
+
+How to run it?
+Run in command line script ./run-services.sh
+
