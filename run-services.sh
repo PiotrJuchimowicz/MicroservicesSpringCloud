@@ -14,10 +14,10 @@ echo 'consul started on default port which is 8500';
 
 echo 'starting microservices';
 (cd loss-config-service && mvn spring-boot:run &) 
-(cd loss-tracing-service && mvn spring-boot:run &) 
-(cd loss-adjusters-service && mvn spring-boot:run &) 
-(cd loss-management-service && mvn spring-boot:run &) 
-(cd loss-notification-service && mvn spring-boot:run &) 
-(cd loss-api-gateway-service && mvn spring-boot:run &) 
+(sleep 8 && cd loss-tracing-service && mvn spring-boot:run &) 
+(sleep 8 && cd loss-adjusters-service && mvn spring-boot:run &) 
+(sleep 8 && cd loss-management-service && mvn spring-boot:run &) 
+(sleep 8 && cd loss-notification-service && mvn spring-boot:run &) 
+(sleep 8 && cd loss-api-gateway-service && mvn spring-boot:run &) 
 echo 'microservices started';
 
