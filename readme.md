@@ -24,4 +24,8 @@ Keeps information about location of servies and provides health checks.
 
 You can run application using run-services.sh script and stop by stop-services.sh script.
 
+![Screenshot](Microservices.jpg)
+
+
+
 
